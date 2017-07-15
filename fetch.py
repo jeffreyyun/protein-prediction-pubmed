@@ -1,37 +1,53 @@
-import os
 from Bio import Entrez
-from Bio import SeqIO
-Entrez.email = "hyun9@g.ucla.edu"
+import time
+Entrez.email = "hyun9@ucla.edu"
 
-db = "protein"
-search_term = "peripheral membrane protein"
-return_amount = 10
+term="WecB/TagA/CpsF[All Fields]"
+db="protein"
+batch_size=10
 
-handle = Entrez.esearch(db=db, term=search_term, retmax=return_amount)
-record = Entrez.read(handle)
-handle.close()
-idlist=record["IdList"]
-print("IDList: ")
-print(idlist)
+search_handle = Entrez.esearch(db=db, term=term, idtype="acc", retmax=batch_size)
+record = Entrez.read(search_handle)
+search_handle.close()
 
-search_results = Entrez.read(Entrez.epost("nucleotide", id=",".join(id_list)))
-webenv = search_results["WebEnv"]
-query_key = search_results["QueryKey"]
-print(search_results)
+id_list = ",".join(record["IdList"])
+count = int(record["Count"])
 
+record = Entrez.read(Entrez.epost(db, id_list)
 
-filename = "test.gbk"
-if not os.path.isfile(filename):
-	net_handle = Entrez.efetch(db="nucleotide", id=idlist, rettype="gb", retmode="text")
-	out_handle = open(filename, "w")
-	out_handle.write(net_handle.read())
-	out_handle.close()
-	net_handle.close()
-	print("Saved")
+webenv = record["WebEnv"]
+query_key = record["QueryKey"]
 
+try:
+    from urllib.error import HTTPError  # for Python 3
+except ImportError:
+    from urllib2 import HTTPError  # for Python 2
 
-print("Parsing...")
-record = SeqIO.parse(filename, "gb")
-for seq_record in record:
-	print(repr(record.id))
-	print(repr(record.translation))
+batch_size = 3
+out_handle = open("data.fasta", "w")
+for start in range(0, count, batch_size):
+    end = min(count, start+batch_size)
+    print("Going to download record %i to %i" % (start+1, end))
+    attempt = 0
+    while attempt < 5:
+        attempt += 1
+        try:
+            fetch_handle = Entrez.efetch(db=db,
+                                         rettype="fasta", retmode="text",
+                                         retstart=start, retmax=batch_size,
+                                         webenv=webenv, query_key=query_key,
+                                         idtype="acc")
+        except HTTPError as err:
+            if 500 <= err.code <= 599:
+                print("Received error from server %s" % err)
+                print("Attempt %i of 5" % attempt)
+                time.sleep(5)
+            else:
+            	print("Attempt %i of 5" % attempt)
+            	time.sleep(1)
+    data = fetch_handle.read()
+    fetch_handle.close()
+    out_handle.write(data)
+out_handle.close()
+
+"""

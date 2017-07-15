@@ -5,10 +5,10 @@ Entrez.email = "jenniezheng321@gmail.com"
 
 webenv=""
 query_key=""
-max_count=200
+max_count=100
 database="protein"
-parameter="all[filter]"
-batch_size=5
+parameter="WecB/TagA/CpsF"
+batch_size=10
 out_handle=open("data.fasta","w")
 id_list=[]
 
