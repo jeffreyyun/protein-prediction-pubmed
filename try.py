@@ -7,7 +7,7 @@ webenv=""
 query_key=""
 max_count=100
 database="protein"
-parameter="WecB/TagA/CpsF"
+parameter="WecB/TagA/CpsF AND membrane"
 batch_size=10
 out_handle=open("data.fasta","w")
 id_list=[]
@@ -79,10 +79,14 @@ def fetch():
 			out_handle.write(data)
 
 
+def process():
+
+
 
 def main():
 	search()
 	fetch()
+	process()
 
 
 if __name__ == "__main__":
