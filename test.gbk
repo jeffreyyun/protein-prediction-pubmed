@@ -1,0 +1,873 @@
+LOCUS       EU725883                 182 bp    DNA     linear   ENV 11-JUL-2017
+DEFINITION  Uncultured bacterium clone M1A 16S ribosomal RNA gene, partial
+            sequence.
+ACCESSION   EU725883
+VERSION     EU725883.2
+KEYWORDS    ENV.
+SOURCE      uncultured bacterium
+  ORGANISM  uncultured bacterium
+            Bacteria; environmental samples.
+REFERENCE   1  (bases 1 to 182)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Bacterial community shift during composting of oil palm empty fruit
+            bunches as determined by denaturing gradient gel electrophoresis
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 182)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-MAY-2008) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+REFERENCE   3  (bases 1 to 182)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:198448597.
+FEATURES             Location/Qualifiers
+     source          1..182
+                     /organism="uncultured bacterium"
+                     /mol_type="genomic DNA"
+                     /isolation_source="OPEFB compost"
+                     /db_xref="taxon:77133"
+                     /clone="M1A"
+                     /environmental_sample
+                     /country="Malaysia"
+     rRNA            <1..>182
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 cgacagtggg gaattttggg caatggccga aaggctgacc cagcgacgtc gcgtgcggga
+       61 ggacgccctt cggggtgtaa accgctgtca gaggggacga aaggccgggg tgggaatact
+      121 gccctggagt gacggtaccc tcagaggaag caccggctaa ctctgtgcca gcagccgcgg
+      181 ta
+//
+
+LOCUS       EU725879                 194 bp    DNA     linear   ENV 11-JUL-2017
+DEFINITION  Uncultured bacterium clone M22_2 16S ribosomal RNA gene, partial
+            sequence.
+ACCESSION   EU725879
+VERSION     EU725879.2
+KEYWORDS    ENV.
+SOURCE      uncultured bacterium
+  ORGANISM  uncultured bacterium
+            Bacteria; environmental samples.
+REFERENCE   1  (bases 1 to 194)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Bacterial community shift during composting of oil palm empty fruit
+            bunches as determined by denaturing gradient gel electrophoresis
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 194)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-MAY-2008) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+REFERENCE   3  (bases 1 to 194)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:198448593.
+FEATURES             Location/Qualifiers
+     source          1..194
+                     /organism="uncultured bacterium"
+                     /mol_type="genomic DNA"
+                     /isolation_source="OPEFB compost"
+                     /db_xref="taxon:77133"
+                     /clone="M22_2"
+                     /environmental_sample
+                     /country="Malaysia"
+     rRNA            <1..>194
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 gactcggcgg aggcgacagt ggggaatatt ccgcaatggg cgaaagcctg acggagcgac
+       61 gccgcgtgag cgatgaaggt cttcggatcg taaagctctg ttgttaggga agaacaagta
+      121 ccggagtaac tgccggtacc ttgacggtac ctaaccagaa agccccggct aactacgtgc
+      181 cagcagccgc ggta
+//
+
+LOCUS       EU725878                 183 bp    DNA     linear   ENV 11-JUL-2017
+DEFINITION  Uncultured bacterium clone M219_1 16S ribosomal RNA gene, partial
+            sequence.
+ACCESSION   EU725878
+VERSION     EU725878.2
+KEYWORDS    ENV.
+SOURCE      uncultured bacterium
+  ORGANISM  uncultured bacterium
+            Bacteria; environmental samples.
+REFERENCE   1  (bases 1 to 183)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Bacterial community shift during composting of oil palm empty fruit
+            bunches as determined by denaturing gradient gel electrophoresis
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 183)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-MAY-2008) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+REFERENCE   3  (bases 1 to 183)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:198448592.
+FEATURES             Location/Qualifiers
+     source          1..183
+                     /organism="uncultured bacterium"
+                     /mol_type="genomic DNA"
+                     /isolation_source="OPEFB compost"
+                     /db_xref="taxon:77133"
+                     /clone="M219_1"
+                     /environmental_sample
+                     /country="Malaysia"
+     rRNA            <1..>183
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 aggcgacagt ggggaatatt ggacaatggg ggaaaccctg atccagcgac gcgcgtgggt
+       61 gaagaaggcc tgcgggttgt aaagcccttt cggtggggaa gaaaagcttc gacctaatac
+      121 gtcggagtct tgacgtaacc cacagaagaa gcaccggcta actctgtgcc agcagccgcg
+      181 gta
+//
+
+LOCUS       EU725875                 192 bp    DNA     linear   ENV 11-JUL-2017
+DEFINITION  Uncultured bacterium clone M23_3 16S ribosomal RNA gene, partial
+            sequence.
+ACCESSION   EU725875
+VERSION     EU725875.2
+KEYWORDS    ENV.
+SOURCE      uncultured bacterium
+  ORGANISM  uncultured bacterium
+            Bacteria; environmental samples.
+REFERENCE   1  (bases 1 to 192)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Bacterial community shift during composting of oil palm empty fruit
+            bunches as determined by denaturing gradient gel electrophoresis
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 192)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-MAY-2008) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+REFERENCE   3  (bases 1 to 192)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:198448589.
+FEATURES             Location/Qualifiers
+     source          1..192
+                     /organism="uncultured bacterium"
+                     /mol_type="genomic DNA"
+                     /isolation_source="OPEFB compost"
+                     /db_xref="taxon:77133"
+                     /clone="M23_3"
+                     /environmental_sample
+                     /country="Malaysia"
+     rRNA            <1..>192
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 tgcagggagg cgacagtagg gaatcttccg caatggacga aagtctgacg gagcaacgcc
+       61 gcgtgagcga agaaggtctt cggatcgtaa agctctgttg tcagggaaga acaagtaccg
+      121 ttcgataagg gcggtacctt gacggtacct gacgagaaag ccccggctaa ctacgtgcca
+      181 gcagccgcgg ta
+//
+
+LOCUS       EU725872                 177 bp    DNA     linear   ENV 11-JUL-2017
+DEFINITION  Uncultured bacterium clone M90_2 16S ribosomal RNA gene, partial
+            sequence.
+ACCESSION   EU725872
+VERSION     EU725872.2
+KEYWORDS    ENV.
+SOURCE      uncultured bacterium
+  ORGANISM  uncultured bacterium
+            Bacteria; environmental samples.
+REFERENCE   1  (bases 1 to 177)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Bacterial community shift during composting of oil palm empty fruit
+            bunches as determined by denaturing gradient gel electrophoresis
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 177)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-MAY-2008) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+REFERENCE   3  (bases 1 to 177)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:198448586.
+FEATURES             Location/Qualifiers
+     source          1..177
+                     /organism="uncultured bacterium"
+                     /mol_type="genomic DNA"
+                     /isolation_source="OPEFB compost"
+                     /db_xref="taxon:77133"
+                     /clone="M90_2"
+                     /environmental_sample
+                     /country="Malaysia"
+     rRNA            <1..>177
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 tttcagcaag attacgggag gcgacagtgg ggagttttgg gcaatgggcg aaagcctgac
+       61 ccagcaacgc cgcgtgaagg atgaggtcct tcgggatgta aacttcgtaa gaatgggaag
+      121 aataaatgac ggtaccattt gtaaggtccg gctaactacg tgccagcagc cgcggta
+//
+
+LOCUS       EU725870                 190 bp    DNA     linear   ENV 11-JUL-2017
+DEFINITION  Uncultured bacterium clone M88_4 16S ribosomal RNA gene, partial
+            sequence.
+ACCESSION   EU725870
+VERSION     EU725870.2
+KEYWORDS    ENV.
+SOURCE      uncultured bacterium
+  ORGANISM  uncultured bacterium
+            Bacteria; environmental samples.
+REFERENCE   1  (bases 1 to 190)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Bacterial community shift during composting of oil palm empty fruit
+            bunches as determined by denaturing gradient gel electrophoresis
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 190)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-MAY-2008) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+REFERENCE   3  (bases 1 to 190)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:198448584.
+FEATURES             Location/Qualifiers
+     source          1..190
+                     /organism="uncultured bacterium"
+                     /mol_type="genomic DNA"
+                     /isolation_source="OPEFB compost"
+                     /db_xref="taxon:77133"
+                     /clone="M88_4"
+                     /environmental_sample
+                     /country="Malaysia"
+     rRNA            <1..>190
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 acgggaggcg acagtaggga atcttccgca atggacgaaa gtctgacgga gcaacgccgc
+       61 gtgagtgagg aaggccttcg ggtcgtaaag ctctgttgcc agggaagaac gggtggagga
+      121 gtaactgcct tcatcatgac ggtacctgag aagaaagccc cggcctaact acgtgccagc
+      181 agccgcggta
+//
+
+LOCUS       EU725869                 200 bp    DNA     linear   ENV 11-JUL-2017
+DEFINITION  Uncultured bacterium clone M82_2 16S ribosomal RNA gene, partial
+            sequence.
+ACCESSION   EU725869
+VERSION     EU725869.2
+KEYWORDS    ENV.
+SOURCE      uncultured bacterium
+  ORGANISM  uncultured bacterium
+            Bacteria; environmental samples.
+REFERENCE   1  (bases 1 to 200)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Bacterial community shift during composting of oil palm empty fruit
+            bunches as determined by denaturing gradient gel electrophoresis
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 200)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-MAY-2008) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+REFERENCE   3  (bases 1 to 200)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:198448583.
+FEATURES             Location/Qualifiers
+     source          1..200
+                     /organism="uncultured bacterium"
+                     /mol_type="genomic DNA"
+                     /isolation_source="OPEFB compost"
+                     /db_xref="taxon:77133"
+                     /clone="M82_2"
+                     /environmental_sample
+                     /country="Malaysia"
+     rRNA            <1..>200
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 aggcaggatt accggaggcg acagtgggga attttgaaca atgggggcaa ccctgtatcc
+       61 agccatgccg cgtgagtgaa gaaggccttc gggttgtaaa gctctttcgg acggaacgaa
+      121 acggttggcg tgaataacgc cgactaatga tggtaccgta agaagaagca ccggctaact
+      181 acgtgccagc agccgcggta
+//
+
+LOCUS       EU725867                 189 bp    DNA     linear   ENV 11-JUL-2017
+DEFINITION  Uncultured bacterium clone M31_7 16S ribosomal RNA gene, partial
+            sequence.
+ACCESSION   EU725867
+VERSION     EU725867.2
+KEYWORDS    ENV.
+SOURCE      uncultured bacterium
+  ORGANISM  uncultured bacterium
+            Bacteria; environmental samples.
+REFERENCE   1  (bases 1 to 189)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Bacterial community shift during composting of oil palm empty fruit
+            bunches as determined by denaturing gradient gel electrophoresis
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 189)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-MAY-2008) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+REFERENCE   3  (bases 1 to 189)
+  AUTHORS   Goh,C.M., Jong,B.C., Liew,P.W.Y. and Thong,K.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) Agrotechnology and Biosciences Division,
+            Malaysian Nuclear Agency, Nuclear Malaysia, Bangi, Kajang, Selangor
+            43000, Malaysia
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:198448581.
+FEATURES             Location/Qualifiers
+     source          1..189
+                     /organism="uncultured bacterium"
+                     /mol_type="genomic DNA"
+                     /isolation_source="OPEFB compost"
+                     /db_xref="taxon:77133"
+                     /clone="M31_7"
+                     /environmental_sample
+                     /country="Malaysia"
+     rRNA            <1..>189
+                     /product="16S ribosomal RNA"
+ORIGIN      
+        1 gattacaggg aggcgacagt gaggaatatt ggtcaatggg cgcaagcctg aaccagccat
+       61 gtcgcgtgca ggaagactgc cctatgggtt gtaaactgct tttatagtag aagagacaca
+      121 tctacgtgta gatgtctgcc agtatactat gaataagcat cggctaactc cgtgccagca
+      181 gccgcggta
+//
+
+LOCUS       FJ383171                1861 bp    mRNA    linear   PLN 11-JUL-2017
+DEFINITION  Cucumis melo 1-aminocyclopropane-1-carboxylic acid synthase mRNA,
+            complete cds.
+ACCESSION   FJ383171
+VERSION     FJ383171.2
+KEYWORDS    .
+SOURCE      Cucumis melo (muskmelon)
+  ORGANISM  Cucumis melo
+            Eukaryota; Viridiplantae; Streptophyta; Embryophyta; Tracheophyta;
+            Spermatophyta; Magnoliophyta; eudicotyledons; Gunneridae;
+            Pentapetalae; rosids; fabids; Cucurbitales; Cucurbitaceae;
+            Benincaseae; Cucumis.
+REFERENCE   1  (bases 1 to 1861)
+  AUTHORS   Ding,Q., Guo,A., Liao,X., Zhang,R., Liu,J. and Sun,Y.
+  TITLE     Molecular cloning of 1-aminocyclopropane-1-carboxylic acid synthase
+            (CMe-ACS3) gene cDNA from hami melon
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 1861)
+  AUTHORS   Ding,Q., Guo,A., Liao,X., Zhang,R., Liu,J. and Sun,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (14-OCT-2008) College of Life Sciences, Northwest
+            Sci-Tech University of Agriculture and Forestry, Taicheng Road
+            No.4, Yangling, Shaanxi 712100, P.R. China
+REFERENCE   3  (bases 1 to 1861)
+  AUTHORS   Ding,Q., Guo,A., Liao,X., Zhang,R., Liu,J. and Sun,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) College of Life Sciences, Northwest
+            Sci-Tech University of Agriculture and Forestry, Taicheng Road
+            No.4, Yangling, Shaanxi 712100, P.R. China
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:226823034.
+FEATURES             Location/Qualifiers
+     source          1..1861
+                     /organism="Cucumis melo"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:3656"
+                     /tissue_type="young leaves"
+     5'UTR           1..206
+     CDS             207..1652
+                     /note="CMe-ACS3"
+                     /codon_start=1
+                     /product="1-aminocyclopropane-1-carboxylic acid synthase"
+                     /protein_id="ACO83163.1"
+                     /translation="MKMLSTKATCNSHGQDSSYFLGWEAYEKNPFDETSNPNGIIQMG
+                     LAENQLSFDLLESWLTKNPDAASFKRDGKSIFRELALFQDYHGLPAFKKALVEFMAEI
+                     RGNKVTFEANNIVLTAGATSANETLMFCLAEAGDAFLLPTPYYPGFDRDLKWRTGVEI
+                     VPIHCTSSNGFQVTQPALEQAYKEAESRNLRVKGVLVTNPSNPLGTTMTRNELDLVFD
+                     FITSKGIHLISDEIYSGTVFGSPGFVSAMEVLKERSNEEEEVGKRVHIVYSLSKDLGL
+                     PGFRVGAIYSNDEMVVAAATKMSSFGLVSSQTQYLLSAMLSDKKFTRTYISENQKRLK
+                     QRQKMLVSGLEKAGIKCLESNAGLFCWVDMRHLLESDTFESELKLWKKIVYEVGLNIS
+                     PGSSCHCTEPGWFRVCFANMSQSTLKLAIRRLKSFVQELRSVSTANVSTTTTNIHDNK
+                     FSKNIKKNIFTKWVFRQSVQDQANRKLHYER"
+     3'UTR           1653..1861
+ORIGIN      
+        1 gaaaaactca aacattcgaa gaactatcta ccatattcca accaatacat ccacctcttt
+       61 tctctctctc tctctctmta tatatatttc tatttctcga cacttttttt caatctcata
+      121 aatcttttat acctatatac ctcacctcaa cacattcttc ttcccatcga tcccgaggct
+      181 accttagcag cacaactgaa gaaaaaatga agatgctttc cacaaaagcc acgtgcaatt
+      241 cccacggtca agattcctcc tacttcttag gatgggaagc ttatgagaaa aacccctttg
+      301 atgagacttc taatcccaac ggcatcattc agatgggtct tgccgagaat caactatcat
+      361 ttgatcttct cgaatcatgg cttacaaaaa atccagacgc agccagcttt aaacgtgatg
+      421 gcaaatcaat ttttagagag ctggctctct tccaagatta ccacggctta cccgcattca
+      481 aaaaggcatt ggtagaattt atggcggaaa ttagaggaaa caaagttaca tttgaagcaa
+      541 ataacatagt ccttacagct ggcgctacat cagccaatga aacacttatg ttctgccttg
+      601 cagaggctgg cgatgccttt ctcctcccaa ctccatacta tccaggattt gatagagatt
+      661 tgaaatggag aaccggagtt gagattgtgc caattcattg cactagctcc aacggcttcc
+      721 aagtcaccca acccgcttta gaacaagctt acaaagaagc tgaaagtcgc aacctacgtg
+      781 tcaaaggcgt attggttaca aacccatcta acccattggg gactacgatg acaagaaatg
+      841 aactcgactt ggtttttgat ttcataacct ccaaaggcat tcatttgatc agcgatgaga
+      901 tttactccgg gaccgttttt gggtctccag gattcgtgag cgcgatggag gtacttaagg
+      961 agaggagtaa cgaagaggag gaagttggga agagagttca tattgtttac agtttatcga
+     1021 aggatttagg gctcccaggt tttcgagttg gtgcaattta ctctaacgat gaaatggttg
+     1081 tggcggctgc tactaaaatg tctagctttg ggttggtttc atctcaaaca caatatcttc
+     1141 tttcagctat gctatccgac aagaaattta cgagaaccta tatttcggag aatcaaaaga
+     1201 ggttgaaaca aagacagaaa atgttggtga gtggattaga gaaggctggg attaagtgtt
+     1261 tggagagtaa tgctgggttg ttttgttggg tagatatgag gcatttgttg gaatcagata
+     1321 cgtttgaaag tgaattaaag ctatggaaga agattgttta cgaagtgggt ttgaatattt
+     1381 caccaggatc atcttgtcat tgcactgaac caggctggtt tcgtgtttgt tttgctaata
+     1441 tgtcacagtc aaccttgaaa ctcgctatca gaagattgaa gtcgtttgtt caagaattga
+     1501 gatccgtttc tacagcaaac gtttccacta ccactacaaa tattcatgac aacaaatttt
+     1561 ccaagaatat caagaaaaat attttcacca aatgggtttt ccggcaatcg gttcaagatc
+     1621 aagccaaccg caagctccac tatgaacgat agcctggttt tttttttact catcatccat
+     1681 atttggggga attttttttt cttaatcttg ttgaaatatt ccaaatttag aattttcata
+     1741 ttgtaattag ataaaaaaaa agaaaaagaa aagtgcactc ggtccattgt gggattagta
+     1801 gtggcttaat taaattaatt aattattaat ctttttttct ttaattctga aaaaaaaaaa
+     1861 a
+//
+
+LOCUS       DQ196240                8468 bp    DNA     linear   PLN 11-JUL-2017
+DEFINITION  Puccinia graminis hypothetical chitin synthase class V (chsV) gene,
+            exons 1 through 10 and complete cds.
+ACCESSION   DQ196240
+VERSION     DQ196240.2
+KEYWORDS    .
+SOURCE      Puccinia graminis
+  ORGANISM  Puccinia graminis
+            Eukaryota; Fungi; Dikarya; Basidiomycota; Pucciniomycotina;
+            Pucciniomycetes; Pucciniales; Pucciniaceae; Puccinia.
+REFERENCE   1  (bases 1 to 8468)
+  AUTHORS   Broeker,K., Fehser,S. and Moerschbacher,B.M.
+  TITLE     Survey and expression analysis of five new chitin synthase genes in
+            the biotrophic rust fungus Puccinia graminis
+  JOURNAL   Curr. Genet. 50 (5), 295-305 (2006)
+   PUBMED   16924501
+REFERENCE   2  (bases 1 to 8468)
+  AUTHORS   Broeker,K. and Moerschbacher,B.M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (06-SEP-2005) Plant Biochemistry and Biotechnology,
+            University of Muenster, Hindenburgplatz 55, Muenster 48143, Germany
+REFERENCE   3  (bases 1 to 8468)
+  AUTHORS   Broeker,K. and Moerschbacher,B.M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-JUL-2017) Plant Biochemistry and Biotechnology,
+            University of Muenster, Hindenburgplatz 55, Muenster 48143, Germany
+  REMARK    Sequence update by database staff to remove vector contamination
+COMMENT     On Jul 11, 2017 this sequence version replaced gi:81296280.
+            Name: chs5.
+FEATURES             Location/Qualifiers
+     source          1..8468
+                     /organism="Puccinia graminis"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:5297"
+     gene            <840..7792
+                     /gene="chsV"
+     mRNA            join(<840..1234,1308..3921,4004..4372,4447..4630,
+                     4698..5707,5784..5935,6018..6321,6402..6737,6822..7320,
+                     7426..7792)
+                     /gene="chsV"
+                     /product="hypothetical chitin synthase class V"
+     CDS             join(840..1234,1308..3921,4004..4372,4447..4630,
+                     4698..5707,5784..5935,6018..6321,6402..6737,6822..7320,
+                     7426..7556)
+                     /gene="chsV"
+                     /note="CHSV"
+                     /codon_start=1
+                     /product="hypothetical chitin synthase class V"
+                     /protein_id="ABB70410.1"
+                     /translation="MTNQHTSLTDLTQLVPSSSSPNLDTTPKSQQQPSADETVALLKS
+                     RFLSDLPYLWLSPRCLISLALNKNSPVNSDQSLNAYASDWWDCSEDRRKRVENESGQG
+                     FGSGPHIWALAGKAYYYMRRTGGDQSIITRGESGSGKSEARRLALRFIVDISSALPGK
+                     KGSKLVQQIPAAQFILESFGNAHTLENSNASRFGQYTELQFTENGKLCGLKSLEYYLQ
+                     RSRVVSRPSGERNFHIFYYLTAGGSPEERAYLFLDQPPTTTGLAQLPGQALRNNADHS
+                     ASQPFRFLTQARNQSGQASAASDAQQFVRLKQAFKAIGFSKKSVASTCQLLAAILHLG
+                     NLEFVLDKGKNAEAATVANPPLLDVVASFLGVKSETLESTLTYQTRMVSGERCTIFLD
+                     SEGASQNRDDLAKMLYGLLFSWLNETINQKLCKDDFTSFISLIDLPGTQNNVSRGLNQ
+                     GDGNNLDTFCFNLANERVHGLVLNELFVKNKAEYVTEGLDAHLPGLQTPFYENSEILR
+                     VLTHVPGGLVHIIDDQSRRPNKTDQTMLDAMGRRWGNNTSFTFKDGDERLDRPGSFTC
+                     SHYSGPVTYSVEGFLIQNRDVVSPDYLTLFGASRRASTGHGSTNSFIRQLFVDANLTT
+                     TTHPMSEKTIVAAQQLQRPMRAPSTRRKNRHDVPEKSANDDPTEDVTKKDAKAETDGK
+                     LVVSEFNESLTTLLETMQDTKTWFIFCLKSNDSQLSNQFDGKLVKQQVKFFNIPELAR
+                     RLKDDWMVSLENNEWWDRYKECDPIASDVVRLSLISWQERIEGIKNMMDWDNHDIMLG
+                     NYKIFMNDAAFRQLEDRLRAADGDEQRRYQEKAAVQGTAETFAGNDPYGMPHQSPTFY
+                     PAGAHGNSSEIGLPLVSHAAGQAGHIGGYFDDDRKTVMTDTEGGYGSPMHESESKSYL
+                     GTDRYAPSRNMFDSTGKPADSEKDALTEGAQPGRGEVAEEVVGESSLRKKWLLLVWAL
+                     TFYVPNFLLAWIGRMKRPDVRLAWREKLAINIVIWFCCGIAVFVIAIMGNLICPKEFV
+                     FSANELSSHSFSSNANNMLVAIRGEVFDLTSFAPVHYPSVVPTKAVQSYGGTDATNLF
+                     PVQVSALCSGNGNGISDWIILSGANTTSLEPNSVYHDFRAFTSDARPDWYFEQMYYLR
+                     YNYRRGFMGKTPKEIQSLARNGRKSIAILDGSVYDLTDYITVGPGIRTPTGTSPPSVD
+                     SQFMSPDIVQLFQQGAGGDVTDKFNALNMDRNVKQAQRICLRNLFFAGKVDNRQSAQC
+                     QFAQYILLIFSIMMVSIIGFKFLAALQFGKARQPEDHEKFVIIQIPCYTEGEESLRRA
+                     IDSVTQLKYDDKRKLLFVVCDGMIIGSGNDRPTPRIVLDILGSDPNQNPEALSILSLG
+                     EGAKQHNMAKVYSGLYESGGHVVPYIVLAKCGTPTERSRPGNRGKRDSQMMLMRLFNR
+                     VHFDAPMSPCELELYHQIKNVIGVNPAFYEYVLMIDADTTVDKFSLNRMISAMMHDQR
+                     IVGLCGETSLANAKHSWTTMMQVYEYFISHHLSKAFESLFGSVTCLPGCFTLYRLRTS
+                     EHKPLLVSNQIIDAYSVNRVDTLHMKNLLHLGEDRYLTTLLLKTFPTFKTTFIQDAFA
+                     KTIAPDEWKILLSQRRRWINSTIHNLAELLMIERLCGFCCFSMRFVVFIDLFSTLIQP
+                     VTVAYLAYLLYLVGSKSGLVPTTSIIVIAAIYGLQALIFVFHRKFEHIGWMFFYLLAI
+                     PIFSFLVPIYSFWKMDDFSWGNTRVVLGEAGKKLVIHDEGKFDPSSIPLKTWQEYENE
+                     LWERGSNQSIGSIIADKRNASAKEASLYGQETSYDPPVMMPYSRTHSPGLNEQNHDAR
+                     SLLSGYQGGGGSVMLMPPGNGGYMDPMAGRAMSVHSFGGPQAMMGGGMANSFMGPNNG
+                     MMPMGMGSMYGPAPGFMQGQLGDNGSRRGSGAGFPIPNRGGLPSDEQIIADIQAVLAR
+                     ADLNTITKKGVRQELEAMYATELGDKKAFVNQAIEDQLG"
+     misc_feature    join(930..1234,1308..3360)
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="Region: Myosin motor domain"
+     misc_feature    3805..3873
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="Region: transmembrane region"
+     misc_feature    join(3910..3921,4004..4060)
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="Region: transmembrane region"
+     misc_feature    join(4082..4258,4537..4630,4698..4900)
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="Cytochrome b5-like Heme/Steroid binding domain;
+                     Region: Cyt-b5"
+                     /db_xref="CDD:pfam00173"
+     misc_feature    4925..4993
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="Region: transmembrane region"
+     misc_feature    join(4964..5707,5784..5935,6018..6321,6402..6728)
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="Region: Chitin_synth_2"
+                     /db_xref="CDD:pfam03142"
+     misc_feature    join(6256..6321,6402..6404)
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="Region: transmembrane region"
+     misc_feature    6432..6500
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="Region: transmembrane region"
+     misc_feature    6519..6587
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="Region: transmembrane region"
+     exon            <840..1234
+                     /gene="chsV"
+                     /number=1
+     variation       1223
+                     /gene="chsV"
+                     /replace="c"
+     exon            1308..3921
+                     /gene="chsV"
+                     /number=2
+     variation       1315
+                     /gene="chsV"
+                     /replace="g"
+     variation       1362
+                     /gene="chsV"
+                     /replace="c"
+     variation       1368
+                     /gene="chsV"
+                     /replace="t"
+     variation       1386
+                     /gene="chsV"
+                     /replace="a"
+     variation       1398
+                     /gene="chsV"
+                     /replace="g"
+     variation       1407
+                     /gene="chsV"
+                     /replace="t"
+     variation       1416
+                     /gene="chsV"
+                     /replace="a"
+     variation       1710
+                     /gene="chsV"
+                     /replace="c"
+     variation       1788
+                     /gene="chsV"
+                     /replace="g"
+     variation       1800
+                     /gene="chsV"
+                     /replace="a"
+     variation       1813
+                     /gene="chsV"
+                     /note="results in STOP to Q substitution"
+                     /replace="t"
+     variation       1842
+                     /gene="chsV"
+                     /replace="c"
+     variation       2088
+                     /gene="chsV"
+                     /replace="c"
+     variation       2380
+                     /gene="chsV"
+                     /note="results in Y to D substitution"
+                     /replace="t"
+     variation       2526
+                     /gene="chsV"
+                     /replace="t"
+     variation       2664
+                     /gene="chsV"
+                     /replace="c"
+     variation       3717
+                     /gene="chsV"
+                     /replace="c"
+     exon            4004..4372
+                     /gene="chsV"
+                     /number=3
+     variation       4057
+                     /gene="chsV"
+                     /replace="t"
+     variation       4064
+                     /gene="chsV"
+                     /note="results in L to I substitution"
+                     /replace="c"
+     exon            4447..4630
+                     /gene="chsV"
+                     /number=4
+     exon            4698..5707
+                     /gene="chsV"
+                     /number=5
+     variation       4786
+                     /gene="chsV"
+                     /replace="a"
+     variation       4923
+                     /gene="chsV"
+                     /note="results in R to Q substitution"
+                     /replace="g"
+     exon            5784..5935
+                     /gene="chsV"
+                     /number=6
+     primer_bind     5807..5826
+                     /note="RT-PCR primer"
+     primer_bind     5811..5827
+                     /note="degenerate primer"
+     exon            6018..6321
+                     /gene="chsV"
+                     /number=7
+     variation       6106
+                     /gene="chsV"
+                     /note="results in V to I substitution"
+                     /replace="g"
+     primer_bind     6169..6189
+                     /note="RT-PCR primer"
+     primer_bind     complement(6176..6189)
+                     /note="degenerate primer"
+     exon            6402..6737
+                     /gene="chsV"
+                     /number=8
+     variation       6456
+                     /gene="chsV"
+                     /note="results in M to V substitution"
+                     /replace="a"
+     variation       6570
+                     /gene="chsV"
+                     /note="results in I to V substitution"
+                     /replace="a"
+     variation       6599
+                     /gene="chsV"
+                     /note="results in E to D substitution"
+                     /replace="g"
+     variation       6617
+                     /gene="chsV"
+                     /replace="c"
+     exon            6822..7320
+                     /gene="chsV"
+                     /number=9
+     variation       7016
+                     /gene="chsV"
+                     /replace="c"
+     variation       7195
+                     /gene="chsV"
+                     /note="results in V to A substitution"
+                     /replace="t"
+     exon            7426..7792
+                     /gene="chsV"
+                     /number=10
+     3'UTR           7557..7792
+                     /gene="chsV"
+     regulatory      7783..7792
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="chsV"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+ORIGIN      
+        1 gtgatgagag agctgggagt gacagacttg atgagagatg gctttgggtt actgttcttg
+       61 aatccgatcg tcagtacgat tgggatccaa gtccaatgga ggatcgtctg aagagtgtaa
+      121 aattttcacc cagtgaaaac atcagttctg aggttcaatt tagttttgaa ggttttgttt
+      181 tgaatgcaat caccttgatc gctgcagtga cttggttgac tcgctcctat tcgtttttgg
+      241 tcatgatgga tgatggttat tttattccgt tgtcagcgat caagtggatt ccagcaaatg
+      301 ataatttttg tcgagctcaa ctttggtatc ctcgttcaga ttgattaatg ccatggctgc
+      361 atcggaaata agagtcgaaa agtcagttca tctgggggtc attctgacca tgtaggagtg
+      421 ctgctagctt accgtattaa tgatctcaag atggtcgttt tctttatgca ccacaggaag
+      481 ttcttcactt ggttcggcct gcggacttgc aagtttgccc gaacctaatt atgtagataa
+      541 gcagggtatg ggttttaaga ggggttttaa tgctaaggat gtgggtttct gccatggttt
+      601 ttgcccgaca tcacagcgat gtatgtaagc tgtaaattgt aattggctga tcyttcyctt
+      661 ctctcwccca tctccatccw kccttccctt ctttagtatc cttgttcttc ttcttcttac
+      721 tcttrctctt ctcgactrac gactaataat tgtatcttcc ctcgaatcag ctcatgacct
+      781 tctctcccat ccagccttaa ccaatctaat cccatctcag aaagaaaacc acatccatca
+      841 tgaccaacca gcatacttct cttaccgatc tcacccaact cgtgccctca tcatcatcgc
+      901 caaatttgga tacgacccca aagagtcaac agcagccatc ggcagacgag acggtcgcac
+      961 tactcaagtc taggttccta tccgatctac cctatctatg gctatcccct cgttgtctca
+     1021 tcagtctcgc cctcaacaag aactctcccg tcaattccga tcaatccctc aatgcctatg
+     1081 cctctgactg gtgggactgc agcgaggata ggaggaagag ggtcgagaat gaatccggcc
+     1141 aaggcttcgg ttcagggccg cacatctggg cactcgctgg gaargcctac tattacatga
+     1201 gaagaaccgg tggtgatcaa agtattatta ctaggtgggt cagatcactc ttctattayc
+     1261 wctcacacag ctctactgaa tctgaatcat atctccatcc tatgcagggg cgagagcgga
+     1321 agtggaaaat cagaagccag acgactcgca ctccgtttta tagtcgacat ttcatcggcc
+     1381 ctgcccggaa aaaagggatc caaactcgtt caacagatcc cagccgccca attcatcctc
+     1441 gaatcctttg gtaacgcaca tacactcgaa aactcaaacg cctctcgttt cggtcaatac
+     1501 accgaactcc agttcaccga gaacggcaag ctgtgcggac tcaagagttt ggagtattac
+     1561 ctccaacgct ccagggtggt cagtcgcccg agtggtgaac gtaactttca catcttctac
+     1621 tatctcactg ccggcggatc ccccgaggaa cgtgcatatc tatttctcga tcaacctccc
+     1681 accaccaccg gtctcgccca gcttcctggt caggctctac gaaacaacgc tgatcattca
+     1741 gccagccaac cttttaggtt cttgacacag gctcgtaatc agtctggaca ggcttcagcg
+     1801 gcttccgatg cccagcagtt cgtcagactc aaacaagcct ttaaagccat cggcttctcc
+     1861 aagaaatcgg tcgcctccac ctgtcagctt cttgccgcaa tccttcacct gggcaacctc
+     1921 gagttcgtgc tcgacaaggg aaagaatgcc gaggcagcta ccgttgcaaa tcctccactc
+     1981 ttagacgtcg tcgcttcatt cttgggcgtc aagtctgaaa ccctagagtc taccctgacc
+     2041 tatcaaacgc gaatggtctc gggtgaaagg tgtacgatct tcctcgattc agaaggcgct
+     2101 tcccagaatc gtgatgatct ggctaagatg ctctatggcc tcttattcag ttggctcaat
+     2161 gaaactatca accagaagct atgcaaggat gactttacct cattcatatc attgatcgat
+     2221 ctgcccggta ctcagaacaa tgtctccagg ggtttgaacc agggagatgg taacaatctc
+     2281 gatacgttct gttttaatct agcaaacgag cgcgtccatg gattggtctt gaacgaactg
+     2341 tttgtcaaaa ataaagcgga atacgtgacc gaaggcctcg atgctcatct tcccggactt
+     2401 caaactccat tctatgagaa ttctgagatc cttcgtgtcc ttactcacgt ccccggtgga
+     2461 cttgtgcaca taattgatga tcaaagtcgt cgacccaaca agactgatca gacaatgttg
+     2521 gacgccatgg gtcgacgttg gggaaacaac accagcttta ccttcaagga tggtgacgaa
+     2581 cggctcgatc ggcccggatc gtttacctgc tcacattact ctggaccggt gacctattcg
+     2641 gtagagggtt tcctaatcca gaatcgagac gtggtctccc ctgactatct aaccctcttc
+     2701 ggtgcctcgc gccgtgcttc caccgggcac ggctcgacga attcattcat tcgacagttg
+     2761 tttgtcgatg ctaatctcac cacgaccact catcccatga gtgagaagac gatcgtggct
+     2821 gctcagcagc ttcagagacc aatgcgtgct ccatccaccc gccgaaagaa tcgacacgat
+     2881 gttcctgaaa agtctgccaa tgacgatcca accgaagatg tcactaaaaa ggacgctaag
+     2941 gccgaaaccg atggcaagct ggtcgtctcc gagttcaatg aatccctcac taccctgcta
+     3001 gaaaccatgc aagacaccaa aacttggttt attttctgtc tcaaatcaaa cgactcacaa
+     3061 ctctcaaatc aattcgacgg caagctggtc aagcagcaag ttaagttttt caacattccc
+     3121 gaactggcta gacggttgaa ggacgactgg atggtcagct tggaaaacaa tgagtggtgg
+     3181 gatcgttaca aagaatgtga cccgatcgcg agtgatgtgg tccgtctgag cttaatatct
+     3241 tggcaagaaa ggatcgaagg aattaagaat atgatggatt gggataatca tgacatcatg
+     3301 ttaggaaact acaagatttt catgaatgat gctgcattcc gccagttgga agatcgactt
+     3361 cgcgcagcag acggtgatga acaacgaagg tatcaagaga aagctgccgt ccaggggacc
+     3421 gctgagactt ttgccgggaa tgacccatat ggtatgccac accagtcgcc aaccttttat
+     3481 ccggcggggg cgcacggaaa ttcttccgag attggtctac cactcgtttc ccacgcggca
+     3541 ggacaagccg gacacattgg aggctacttt gatgacgatc ggaaaacggt gatgacagat
+     3601 acggagggcg gctatggctc tccgatgcac gaaagcgaga gcaaatcgta cttgggtaca
+     3661 gaccgctatg cgccctctcg taacatgttc gactcaacag gcaaaccggc cgacagtgag
+     3721 aaagatgcac tcaccgaggg cgctcaacct ggtcgtggag aagtagccga agaagtcgtt
+     3781 ggagaaagca gtctgcgtaa gaagtggctc ttgttggttt gggccttgac tttctatgtc
+     3841 cccaacttcc ttctggcctg gatcggccgc atgaaacgtc cagatgtcag actagcatgg
+     3901 agagaaaaat tggcaatcaa cgtgagtctc gtgctttgcc tcctacactt gtacttgttg
+     3961 ttcagcttag ctgattcaaa tctcgatcat gttttctcaa cagattgtaa tttggttttg
+     4021 ttgtgggatt gcggtgtttg tgattgcgat catgggcaac ttaatctgcc cgaaagaatt
+     4081 tgtgttctca gccaacgaac tgagctcgca ctccttcagc agcaatgcca ataacatgct
+     4141 agtagccatc cgtggtgagg tcttcgattt gacaagcttt gcacccgttc attatccgtc
+     4201 ggtcgtcccg acaaaagccg tccaaagcta tggcggaacc gatgccacca acctcttccc
+     4261 cgtccaagtt agcgcactat gttctggcaa tggtaatggt attagcgatt ggatcatttt
+     4321 gagtggcgct aatactacta gtcttgaacc gaattccgtt tatcacgact ttgtgagttt
+     4381 ttttttttgt ttcgcgctcc aatccatttt gcattttctg atccgtgtct atatttattt
+     4441 ttccagagag cctttacgtc tgatgctcgt ccagattggt actttgaaca aatgtattat
+     4501 ttacggtaca actatcggag agggtttatg ggcaaaactc caaaggaaat tcagtctttg
+     4561 gctcgaaacg gtcgcaaatc aattgctatc ttagacggta gcgtatatga tttaactgac
+     4621 tacatcacag gtaagaacct ttttggaaaa gtaacatcaa tcatcctgct gacttctctt
+     4681 gtgcttgttt tccatagtgg gtcccggaat cagaactccg actggcacat ctcctccgtc
+     4741 agttgattcg cagttcatga gcccagacat tgtccaactc tttcagcaag gagctggtgg
+     4801 tgatgtgacc gacaaattca atgcgctcaa catggatcgg aatgtaaagc aagcccaacg
+     4861 gatctgcctg agaaaccttt tcttcgccgg caaagtggac aatcgacaat cagctcaatg
+     4921 tcaatttgcg caatatatcc tcttgatctt ttcaatcatg atggtctcga ttatcgggtt
+     4981 caagtttttg gcagccctgc aattcggaaa ggctcgtcaa ccggaagacc acgagaagtt
+     5041 tgtgatcatc cagatccctt gttatactga aggtgaagaa tctttaagaa gggctatcga
+     5101 ttcagtcact caattgaagt atgacgacaa gcggaaattg ctctttgttg tatgcgatgg
+     5161 aatgatcatt ggatccggta acgatcgacc gaccccgagg atcgttttgg acattttagg
+     5221 ctccgatcca aatcagaacc cggaagcact aagtatcctc agtctgggtg aaggtgccaa
+     5281 gcaacataac atggccaagg tgtattcagg gctctatgaa tcaggaggtc atgtggtacc
+     5341 gtacatagtc ttagcgaaat gtggaacgcc aaccgaacga tctcgacctg gcaacagggg
+     5401 taaacgagat tcacagatga tgttgatgcg gctgttcaat cgggtacact ttgacgcgcc
+     5461 gatgtcacct tgcgagctcg agctgtacca tcagatcaag aacgtgatcg gtgtcaatcc
+     5521 agccttctac gagtacgtgc tcatgatcga cgccgatact acggtcgata aatttagttt
+     5581 gaatcggatg atctccgcca tgatgcacga tcaaagaatt gtcgggctct gtggcgaaac
+     5641 ctctctggct aatgctaaac attcttggac aacgatgatg caggtttacg aatactttat
+     5701 ctctcatgtg agtttccttg acatgcatct acttttgtcc ccccctgaag attgaccctg
+     5761 tatcttcctt cgcctctttc tagcatttgt ccaaagcgtt cgagagttta ttcggatcgg
+     5821 tgacctgttt gccgggttgt tttaccttgt atcgtctccg aacttccgaa cataaaccat
+     5881 tgctagtcag caatcagatc attgatgcat attctgtcaa ccgagtcgac acgctgtacg
+     5941 tagtcatctc ttcgtacaaa aaaaaacaca tttgtagctc tgcgtacttg attcactgac
+     6001 gatcgagcat ttttcagaca catgaagaat ctcttacatt tgggagaaga tcgatacttg
+     6061 acgacgcttt tgttgaaaac cttcccgacc ttcaagacga ccttcatcca agatgcattc
+     6121 gccaagacga tcgccccgga tgaatggaag attttgcttt cgcaacggcg taggtggatt
+     6181 aactcgacga tccataattt ggctgaactc ttgatgatcg aacgtctctg cggtttctgt
+     6241 tgcttctcaa tgagatttgt cgtcttcatc gatctctttt ctaccctaat tcagcccgtt
+     6301 accgtcgctt atttggctta tgtaagttga tccacgccat tgcaaagcta aggaaaaaga
+     6361 ttgggttatt aaatttttct ttttctgttg actgtgtata gctcttgtac ttggttggct
+     6421 caaaatccgg attagtaccg acaacgtcga tcatcgtgat cgccgcgata tacggattac
+     6481 aagccttgat ctttgtcttc catcgaaagt ttgaacacat tggatggatg ttcttctatc
+     6541 tcttggcgat cccgatcttc tccttcttgg tcccgatcta ctctttctgg aagatggatg
+     6601 acttcagttg gggtaatact cgtgtcgttc ttggtgaggc tggtaagaag ttggttatcc
+     6661 atgatgaagg caaattcgat cctagttcga tccccttgaa aacttggcaa gagtacgaaa
+     6721 atgagttgtg ggagagggtt agtttttctt ttttttttag atttcatctt gttttgccgt
+     6781 tttactcaaa aatacctctc cccgtttggt tacatttcta gggatctaat cagtccattg
+     6841 gctcaatcat cgccgataag cgtaatgctt cggccaaaga ggcatcctta tatggccaag
+     6901 agacgagcta tgatcccccg gtgatgatgc cgtacagtcg aacgcactcg ccgggattga
+     6961 acgaacaaaa tcacgacgca cgatcgctgt tgtcaggcta ccaaggagga ggaggtagtg
+     7021 tgatgttgat gccgccaggc aatgggggtt acatggaccc gatggctggg cgggcgatgt
+     7081 cggtgcactc cttcggaggg ccccaagcga tgatgggcgg aggcatggcg aatagcttca
+     7141 tgggccctaa taacggcatg atgcccatgg gcatgggtag catgtatgga cccgcgcccg
+     7201 gctttatgca gggtcagttg ggcgataatg ggagtcgtag aggcagtggc gccggcttcc
+     7261 cgattccgaa ccgaggcggg ttaccttcgg atgaacagat cattgcggat attcaagctg
+     7321 gtcagtttct cttctcccct cctttttttc caatggaaaa tacacataca aaaaattaac
+     7381 gattctattc gattttgtat cttcttccac ccctacccga aatagtcttg gctagagccg
+     7441 atcttaacac catcactaaa aaaggagttc gtcaggaatt ggaagctatg tatgcgaccg
+     7501 agttgggaga taagaaggcc ttcgtcaacc aagccatcga agatcaattg ggttgatcat
+     7561 ccgtactata tttccttgcc ttctcttctc tctcccactt ttttttcacc tcctctcaac
+     7621 tcgtttgctc gtaacttttt ctctctctca tgatgtctcg agtttttttc tttttcaccc
+     7681 gtctcgtcgt ctttccttcg tcttctagtc catcgtctct ttcttccttt tctctctctc
+     7741 tctttctttg tctcttttat tcaaccctat tgtctacata cacaaatata tacagacatt
+     7801 acattttttt ctctcatata tatatatata tgtgtgtgta ttacattgga tctgagaatg
+     7861 tgggggatgg tagagagtgg actgggaggg ggtrwtcact taaatagatc tcttttcaca
+     7921 attacacctc tttttttgct tcttcttctc tgatcagatg ttacttattt tatacaaaga
+     7981 tgaattagct atttttttta cataatgaaa aggtaatata caattgaatg aacaaaaaag
+     8041 attaagacaa gaggggccaa gctattctta cacacttgaa gaaaaaaatg tctagataga
+     8101 tccttggttt atcatcttat gcagcacata atcttgttat gcatgtgttc actctatcaa
+     8161 tacatgctca tgacatattt ttgtgggggg gcaacttttt ttcttttttc cctacttatt
+     8221 attgacatat cttatgatct tgcagatttg cataatacaa acctaagcca aaagatcatc
+     8281 agttggttac tgagtgagtt tgattatgat tacagtaaca acagaaaaag ttggtgtgtt
+     8341 ttgatgtgca cctatcaatc aaatgatctg cagcttgaac tgatttttgt gtaactcaac
+     8401 aactccctct ataaagaaag gggggaatct atacatggga tggcttgctt atagcagact
+     8461 aaatagat
+//
+

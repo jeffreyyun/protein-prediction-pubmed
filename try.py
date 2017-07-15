@@ -1,10 +1,21 @@
 from Bio import Entrez
 Entrez.email = "jenniezheng321@gmail.com" 
 #searching
+
+db = "protein"
+search_term = "peripheral membrane protein"
+return_amount = 10
+
 handle = Entrez.esearch(db="nucleotide", term="all[filter]", idtype="acc")
 record=Entrez.read(handle)
+handle.close()
+
 count=int(record["Count"])
 id_list=record["IdList"]
+idlist=record["IdList"]
+print("IDList: ")
+print(idlist)
+
 search_results = Entrez.read(Entrez.epost("nucleotide", id=",".join(id_list)))
 webenv = search_results["WebEnv"]
 query_key = search_results["QueryKey"]
