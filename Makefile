@@ -1,5 +1,5 @@
 push: 
 	git pull
-	git add try.py
+	git add fetcher.py
 	git commit -am "organizing"
 	git push origin master
