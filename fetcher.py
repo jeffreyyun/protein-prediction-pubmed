@@ -1,6 +1,6 @@
 from Bio import Entrez
 from time import sleep
-Entrez.email = "jenniezheng321@gmail.com" 
+Entrez.email = "hyun9@ucla.edu" 
 #searching
 
 webenv=""
@@ -8,10 +8,10 @@ query_key=""
 database="protein"
 parameter="WecB/TagA/CpsF AND membrane"
 retmode="text"
-filename="data.fasta"
+datafile="data.fasta"
 max_count=100
 batch_size=10
-out_handle=open(filename,"w")
+out_handle=open(datafile,"w")
 id_list=[]
 
 def search():
@@ -80,11 +80,75 @@ def fetch():
 			fetch_handle.close()
 			out_handle.write(data)
 
+def process():
+	datafile="data.fasta"
+submission="submission.txt"
+	readfile = open(datafile).readlines()
+	for n,line in enumerate(readfile):
+		if line is "":
+			data[n] = "\n"
+		if line.startswith(">"):
+			start = 1
+			readfile[n] = "\n"
+		else if line is not "":
+			data[n] = line.rstrip()
+
+
+	with open("submission.txt", 'w') as writefile:
+		for line in readfile:
+			if len(line) == 0:
+				writefile.write("")
+
+			if line.startswith(">"):
+				writefile.write(line)
+
+			else:
+				for i in range(0, len(line)-15, 5):
+					writefile.write(line[i:i+15])
+					if i + 15 > len(line):
+						writefile.write(line[i:])
+
+
+def process():
+	datafile="data.fasta"
+	submission="submission.txt"
+	extend = False
+	# merges each paragraph into a single line
+	readfile = open(datafile).readlines()
+	for n,line in enumerate(readfile):
+		# separate new protein with whitespace
+		if line.startswith(">"):
+			readfile[n] = "\n\n" + line
+		# if part of sequence, strips the whitespace
+		else:
+			readfile[n] = line.rstrip()
+
+	# saves data processed from above		
+	data = ''.join(readfile)
+	with open("processed.txt", 'w') as writefile:
+		writefile.write(data)
+	data = open("processed.txt", 'r')
+
+	# writes data in chunks of 15, skipping over 5 each time
+	with open("submission.txt", 'w') as writefile:
+		for line in data:
+			llen = len(line)
+			if llen == 0:
+				writefile.write("")
+			elif line.startswith(">"):
+				writefile.write(line)
+			else:
+				for i in range(0, llen-10, 5):
+					if extend and i+18 > llen:
+						writefile.write(line[i:] + "\n")
+						break
+					writefile.write(line[i:i+15] + "\n")
+
 
 def main():
 	search()
 	fetch()
-	#process()
+	process()
 
 
 if __name__ == "__main__":
