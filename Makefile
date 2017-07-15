@@ -1,5 +1,5 @@
 push: 
 	git pull
-	git add try.py
-	git commit -am "organizing"
+	git add .
+	git commit -am "update"
 	git push origin master
