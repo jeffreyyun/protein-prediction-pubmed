@@ -6,18 +6,13 @@ import os
 
 Entrez.email = "jenniezheng321@gmail.com" 
 
-#upper bound ~ 50000 entries
-max_count=500
-batch_size=10
+
+batch_size=1000
 database="protein"
 parameter="all[filter]"
 
-directory_name="default"
-webenv=""
-query_key=""
-id_list=[]
-check_point_start=0
-list_file_data=[]
+directory_name=""
+check_point=0
 
 def process_arguments():
 	if(len(sys.argv)!=2):
@@ -26,121 +21,103 @@ def process_arguments():
 	global directory_name
 	directory_name=str(sys.argv[1])
 
-
+#returns checkpoint
 def process_check_point():
 	try:
 		os.stat(directory_name)
 	except:
 		os.mkdir(directory_name)
-		return False
-	try:
-		list_file = open(directory_name+"/id_list.txt", "r+")
-		global start, id_list,check_point_start, list_file_data
-		id_list=list_file.readline().split(',')
-		check_point_file = open(directory_name+"/check_point.txt", "r+")
-		check_point_start=int(check_point_file.readline())
-		return True
-	except:
-		return False
+		return 0
+	global check_point
+	if os.path.isfile(directory_name+"/check_point.txt"):
+		check_point_file = open(directory_name+"/check_point.txt", "r")
+		check_point= int(check_point_file.readline())
+		check_point_file.close()
+		return check_point
+	else:
+		check_point_file = open(directory_name+"/check_point.txt", "w")
+		check_point_file.write("0")
+		return 0
 	
 
-#only done if no checkpoint set! 
-def collect_ids(): 
-	global max_count;
-	print("Searching with parameter %s in %s database for a maximum of %d ids" % (parameter, database, max_count));
+#gets offset and count, returns id list
+def collect_ids(offset, count): 
+	global database, parameter
 	try:
-		handle = Entrez.esearch(db=database, term=parameter, idtype="acc",retmax=max_count)
+		handle = Entrez.esearch(db=database, retstart=offset, term=parameter, idtype="acc",retmax=count)
 	except HTTPError as err:
 		print("Received error from server %s" % err)
 		sys.exit()
-	except KeyboardInterrupt:
-		print("Quiting")
-		sys.exit()
-	print("Passed")
 	record=Entrez.read(handle)
-	max_count=min(int(record["Count"]),max_count)
-	global id_list
-	id_list=record["IdList"]
-	list_file=open(directory_name+"/id_list.txt","w")
-	list_file.write(",".join(id_list))
-	check_point_file = open(directory_name+"/check_point.txt", "w")
-	check_point_file.write(str(0))
-	print("Checkpoint of %d id's saved." % max_count)
+	return record["IdList"]
 
-#always done
-def conduct_websearch():
-	global webenv, query_key
-	print(id_list[check_point_start:])
-	print("Obtaining %d sequences of ids" % max_count)
+#returns webenv and query key
+def conduct_websearch(id_list):
 	try:
-		search_results = Entrez.read(Entrez.epost("protein", id=",".join(id_list[check_point_start:])))
+		search_results = Entrez.read(Entrez.epost("protein", id=",".join(id_list)))
 	except HTTPError as err:
-			print("Received error from server %s" % err)
-			sys.exit()
-	except KeyboardInterrupt:
-		print("Quiting")
+		print("Received error from server %s" % err)
 		sys.exit()
 	webenv = search_results["WebEnv"]
 	query_key = search_results["QueryKey"]
-	print("Search result is %s" % search_results)
+	return [webenv,query_key]
 
 
-def fetch_data():
-	global check_point_start, list_file_data
-	check_point_file = open(directory_name+"/check_point.txt", "w")
-	fetch_handle = 0
-
-	try:
-		for start in range(check_point_start, max_count, batch_size):
-			out_handle=open(directory_name+"/data"+str(start//batch_size)+".fasta","w")
-			end = min(max_count, start+batch_size)
-			print("Downloading record %i to %i" % (start+1, end))
-			attempt = 0
-			failure = 0
-			while attempt < 3:
-				attempt += 1
-				try:
-					fetch_handle = Entrez.efetch(db="protein",
-					rettype="fasta", retmode="text",
-					id=",".join(id_list[start:end+1]), retmax=batch_size,
-					webenv=webenv, query_key=query_key,
-					idtype="acc")
-				except HTTPError as err:
-					failure=1
-					print("Received error from server %s" % err)
-					if 500 <= err.code <= 599:
-						print("Attempt %i of 3" % attempt)
-						sleep(15)
-			if(not failure):
-				data = fetch_handle.read()
-				fetch_handle.close()
-				out_handle.write(data)
-				out_handle.close()
-				check_point_file.seek(0)
-				check_point_file.write(str(end))
-			else:
-				print("Failed to recover from error")
-				sys.exit()
-	except KeyboardInterrupt:
-		print("Quiting")
-		check_point_file.close()
+def fetch_data(webenv, query_key, id_list, checkpoint):
+	out_handle=open(directory_name+"/data"+str(checkpoint)+".fasta","w")
+	attempt = 0
+	while attempt < 3:
+		attempt += 1
+		failure = 0
+		try:
+			fetch_handle = Entrez.efetch(db="protein",
+			rettype="fasta", retmode="text",
+			id=",".join(id_list), retmax=500000,
+			webenv=webenv, query_key=query_key,
+			idtype="acc")
+		except HTTPError as err:
+			failure=1
+			print("Received error from server %s" % err)
+			if 500 <= err.code <= 599:
+				print("Attempt %i of 3" % attempt)
+				sleep(15)
+	if(not failure):
+		data = fetch_handle.read()
+		fetch_handle.close()
+		out_handle.write(data)
+		out_handle.close()
+	else:
+		print("Failed to recover from error")
 		sys.exit()
 
+	
 
 
 def main():
+	global database, parameter
 	process_arguments()
-	check_point_exists=process_check_point()
-	if(not check_point_exists):
-		print("No checkpoint found. Collecting ids.")
-		collect_ids()
-	elif(check_point_start>=len(id_list)):
-		print("Nothing to do. Done.")
-		return
-	else:
-		print("Checkpoint found. Starting at %d out of %d." % (check_point_start, len(id_list)))
-	conduct_websearch();
-	fetch_data()
+	check_point=process_check_point()
+	#Preliminary check: 
+	try:
+		handle = Entrez.esearch(db=database, retstart=check_point, term=parameter, idtype="acc",retmax=5)
+	except HTTPError as err:
+		print("Received error from server %s" % err)
+		sys.exit()
+	record=Entrez.read(handle)
+	max_count=int(record["Count"])
+	while (check_point<max_count):
+		try:
+			print("Retrieving protein sequence from index %d to %d" % (check_point, check_point+batch_size-1))
+			id_list=collect_ids(check_point,batch_size)
+			webenv, query=conduct_websearch(id_list)
+			fetch_data(webenv, query, id_list, check_point)
+			check_point+=len(id_list)
+			check_point_file = open(directory_name+"/check_point.txt", "w")
+			check_point_file.write(str(check_point))
+			check_point_file.close()
+		except KeyboardInterrupt:
+			print("Quiting")
+			sys.exit()
 	print("Done!")
 
 if __name__ == "__main__":
