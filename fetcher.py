@@ -3,22 +3,16 @@ from time import sleep
 from urllib.error import HTTPError  
 import sys
 import os
+from parameters import *
 
 Entrez.email = "jenniezheng321@gmail.com" 
-
-
-batch_size=1000
-database="protein"
-parameter="all[filter]"
-
-directory_name=""
-check_point=0
+check_point = 0
 
 def process_arguments():
+	""" incompatible with current version """
 	if(len(sys.argv)!=2):
 		print("Usage: python3 fetcher.py PROJECT_DIRECTORY_NAME")
 		exit(1)
-	global directory_name
 	directory_name=str(sys.argv[1])
 
 #returns checkpoint
@@ -41,9 +35,8 @@ def process_check_point():
 
 #gets offset and count, returns id list
 def collect_ids(offset, count): 
-	global database, parameter
 	try:
-		handle = Entrez.esearch(db=database, retstart=offset, term=parameter, idtype="acc",retmax=count)
+		handle = Entrez.esearch(db=db, retstart=offset, term=term, idtype="acc",retmax=count)
 	except HTTPError as err:
 		print("Received error from server %s" % err)
 		sys.exit()
@@ -53,7 +46,7 @@ def collect_ids(offset, count):
 #returns webenv and query key
 def conduct_websearch(id_list):
 	try:
-		search_results = Entrez.read(Entrez.epost("protein", id=",".join(id_list)))
+		search_results = Entrez.read(Entrez.epost(db, id=",".join(id_list)))
 	except HTTPError as err:
 		print("Received error from server %s" % err)
 		sys.exit()
@@ -63,13 +56,12 @@ def conduct_websearch(id_list):
 
 
 def fetch_data(webenv, query_key, id_list, checkpoint):
-	out_handle=open(directory_name+"/data"+str(checkpoint)+".fasta","w")
 	attempt = 0
 	while attempt < 3:
 		attempt += 1
 		failure = 0
 		try:
-			fetch_handle = Entrez.efetch(db="protein",
+			fetch_handle = Entrez.efetch(db=db,
 			rettype="fasta", retmode="text",
 			id=",".join(id_list), retmax=500000,
 			webenv=webenv, query_key=query_key,
@@ -83,6 +75,7 @@ def fetch_data(webenv, query_key, id_list, checkpoint):
 	if(not failure):
 		data = fetch_handle.read()
 		fetch_handle.close()
+		out_handle=open(directory_name+"/data"+str(checkpoint)+".fasta","w")
 		out_handle.write(data)
 		out_handle.close()
 	else:
@@ -91,12 +84,11 @@ def fetch_data(webenv, query_key, id_list, checkpoint):
 
 
 def main():
-	global database, parameter
-	process_arguments()
+	#process_arguments()
 	check_point=process_check_point()
 	#Preliminary check: 
 	try:
-		handle = Entrez.esearch(db=database, retstart=check_point, term=parameter, idtype="acc",retmax=5)
+		handle = Entrez.esearch(db=db, retstart=check_point, term=term, idtype="acc",retmax=5)
 	except HTTPError as err:
 		print("Received error from server %s" % err)
 		sys.exit()

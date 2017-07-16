@@ -1,5 +1,12 @@
-batch_size=10
-directory_name="data.fasta"
+from parameters import *
+import os
+#import pdb
+
+"""
+TODO: Create checkpoint for processing sequences --> so no duplicates in processed file!
+"""
+
+file_start_name = "data"
 
 def process_sequences(submission="submission.txt", chunk15=False, extend=False):
 
@@ -8,9 +15,15 @@ def process_sequences(submission="submission.txt", chunk15=False, extend=False):
 	print(check_point)
 	check_point_file.close()
 	
-	for batch_num in range(0, check_point//batch_size):
+	batch_files= []
+	for i in os.listdir(directory_name):
+		if i.startswith(file_start_name):
+			batch_files.append(i)
+
+	#pdb.set_trace()
+	for batch in batch_files:
 		# assumes batches numbered as "data0.fasta", "data1.fasta", etc., can change
-		datafile=directory_name+"/data"+str(batch_num)+".fasta"
+		datafile=directory_name+"/"+batch
 
 		# merges each paragraph into a single line
 		readfile = open(datafile).readlines()
