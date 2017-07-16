@@ -1,155 +1,121 @@
 from Bio import Entrez
 from time import sleep
-Entrez.email = "hyun9@ucla.edu" 
-#searching
+from urllib.error import HTTPError  
+import sys
+import os
 
-webenv=""
-query_key=""
+Entrez.email = "jenniezheng321@gmail.com" 
+
+
+batch_size=1000
 database="protein"
-parameter="WecB/TagA/CpsF AND membrane"
-retmode="text"
-datafile="data.fasta"
-max_count=100
-batch_size=10
-out_handle=open(datafile,"w")
-id_list=[]
+parameter="all[filter]"
 
-def search():
-	print("Searching with parameter \"%s\" in %s database for a maximum of %d ids" % (parameter, database, max_count));
-	handle = Entrez.esearch(db=database, term=parameter, idtype="acc",retmax=max_count)
+directory_name=""
+check_point=0
+
+def process_arguments():
+	if(len(sys.argv)!=2):
+		print("Usage: python3 fetcher.py PROJECT_DIRECTORY_NAME")
+		exit(1)
+	global directory_name
+	directory_name=str(sys.argv[1])
+
+#returns checkpoint
+def process_check_point():
+	try:
+		os.stat(directory_name)
+	except:
+		os.mkdir(directory_name)
+		return 0
+	global check_point
+	if os.path.isfile(directory_name+"/check_point.txt"):
+		check_point_file = open(directory_name+"/check_point.txt", "r")
+		check_point= int(check_point_file.readline())
+		check_point_file.close()
+		return check_point
+	else:
+		check_point_file = open(directory_name+"/check_point.txt", "w")
+		check_point_file.write("0")
+		return 0
+
+#gets offset and count, returns id list
+def collect_ids(offset, count): 
+	global database, parameter
+	try:
+		handle = Entrez.esearch(db=database, retstart=offset, term=parameter, idtype="acc",retmax=count)
+	except HTTPError as err:
+		print("Received error from server %s" % err)
+		sys.exit()
 	record=Entrez.read(handle)
-	count=int(record["Count"])
-	global webenv, query_key, id_list 
-	id_list=record["IdList"]
-	#print("IDs to obtain: ", id_list)
-	search_results = Entrez.read(Entrez.epost("protein", id=",".join(id_list)))
+	return record["IdList"]
+
+#returns webenv and query key
+def conduct_websearch(id_list):
+	try:
+		search_results = Entrez.read(Entrez.epost("protein", id=",".join(id_list)))
+	except HTTPError as err:
+		print("Received error from server %s" % err)
+		sys.exit()
 	webenv = search_results["WebEnv"]
 	query_key = search_results["QueryKey"]
-	#print("Search result is %s" % search_results)
+	return [webenv,query_key]
 
-from urllib.error import HTTPError  
 
-def fetch_individual(start, end):
-	for num in range(start, end+1, 1):
-		print("Going to download record %i individually" % num)
-		failure=0
-		try:
-			fetch_handle = Entrez.efetch(db="protein", rettype="fasta", retmode=retmode,
-										retstart=start, retmax=1,
-										webenv=webenv, query_key=query_key,
-										idtype="acc")
-		except HTTPError as err:
-			if 500 <= err.code <= 599:
-				print("Received error from server %s" % err)
-				print("Attempt %i of 3" % attempt)
-				sleep(10)
-			else:
-				print("Failed to download %s individually" % id_list[num])
-				failure=1
-		if(not failure):
-			data = fetch_handle.read()
-			fetch_handle.close()
-			out_handle.write(data)
-
-def fetch():
-	for start in range(0, max_count, batch_size):
-		end = min(max_count, start+batch_size)
-		print("Going to download record %i to %i" % (start+1, end))
-		attempt = 0
+def fetch_data(webenv, query_key, id_list, checkpoint):
+	out_handle=open(directory_name+"/data"+str(checkpoint)+".fasta","w")
+	attempt = 0
+	while attempt < 3:
+		attempt += 1
 		failure = 0
-		while attempt < 3:
-			attempt += 1
-			try:
-				fetch_handle = Entrez.efetch(db="protein",
-				rettype="fasta", retmode=retmode,
-				retstart=start, retmax=batch_size,
-				webenv=webenv, query_key=query_key,
-				idtype="acc")
-			except HTTPError as err:
-				print("Got exception")
-				if 500 <= err.code <= 599:
-					print("Received error from server %s" % err)
-					print("Attempt %i of 3" % attempt)
-					sleep(10)
-				else:
-					failure=1
-					fetch_individual(start+1,end)
-					break;
-		if(not failure):
-			data = fetch_handle.read()
-			fetch_handle.close()
-			out_handle.write(data)
-
-def process():
-	datafile="data.fasta"
-submission="submission.txt"
-	readfile = open(datafile).readlines()
-	for n,line in enumerate(readfile):
-		if line is "":
-			data[n] = "\n"
-		if line.startswith(">"):
-			start = 1
-			readfile[n] = "\n"
-		else if line is not "":
-			data[n] = line.rstrip()
-
-
-	with open("submission.txt", 'w') as writefile:
-		for line in readfile:
-			if len(line) == 0:
-				writefile.write("")
-
-			if line.startswith(">"):
-				writefile.write(line)
-
-			else:
-				for i in range(0, len(line)-15, 5):
-					writefile.write(line[i:i+15])
-					if i + 15 > len(line):
-						writefile.write(line[i:])
-
-
-def process():
-	datafile="data.fasta"
-	submission="submission.txt"
-	extend = False
-	# merges each paragraph into a single line
-	readfile = open(datafile).readlines()
-	for n,line in enumerate(readfile):
-		# separate new protein with whitespace
-		if line.startswith(">"):
-			readfile[n] = "\n\n" + line
-		# if part of sequence, strips the whitespace
-		else:
-			readfile[n] = line.rstrip()
-
-	# saves data processed from above		
-	data = ''.join(readfile)
-	with open("processed.txt", 'w') as writefile:
-		writefile.write(data)
-	data = open("processed.txt", 'r')
-
-	# writes data in chunks of 15, skipping over 5 each time
-	with open("submission.txt", 'w') as writefile:
-		for line in data:
-			llen = len(line)
-			if llen == 0:
-				writefile.write("")
-			elif line.startswith(">"):
-				writefile.write(line)
-			else:
-				for i in range(0, llen-10, 5):
-					if extend and i+18 > llen:
-						writefile.write(line[i:] + "\n")
-						break
-					writefile.write(line[i:i+15] + "\n")
+		try:
+			fetch_handle = Entrez.efetch(db="protein",
+			rettype="fasta", retmode="text",
+			id=",".join(id_list), retmax=500000,
+			webenv=webenv, query_key=query_key,
+			idtype="acc")
+		except HTTPError as err:
+			failure=1
+			print("Received error from server %s" % err)
+			if 500 <= err.code <= 599:
+				print("Attempt %i of 3" % attempt)
+				sleep(15)
+	if(not failure):
+		data = fetch_handle.read()
+		fetch_handle.close()
+		out_handle.write(data)
+		out_handle.close()
+	else:
+		print("Failed to recover from error")
+		sys.exit()
 
 
 def main():
-	search()
-	fetch()
-	process()
-
+	global database, parameter
+	process_arguments()
+	check_point=process_check_point()
+	#Preliminary check: 
+	try:
+		handle = Entrez.esearch(db=database, retstart=check_point, term=parameter, idtype="acc",retmax=5)
+	except HTTPError as err:
+		print("Received error from server %s" % err)
+		sys.exit()
+	record=Entrez.read(handle)
+	max_count=int(record["Count"])
+	while (check_point<max_count):
+		try:
+			print("Retrieving protein sequence from index %d to %d" % (check_point, check_point+batch_size-1))
+			id_list=collect_ids(check_point,batch_size)
+			webenv, query=conduct_websearch(id_list)
+			fetch_data(webenv, query, id_list, check_point)
+			check_point+=len(id_list)
+			check_point_file = open(directory_name+"/check_point.txt", "w")
+			check_point_file.write(str(check_point))
+			check_point_file.close()
+		except KeyboardInterrupt:
+			print("Quiting")
+			sys.exit()
+	print("Done!")
 
 if __name__ == "__main__":
 	main()

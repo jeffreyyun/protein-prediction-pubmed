@@ -38,7 +38,6 @@ def process_check_point():
 		check_point_file = open(directory_name+"/check_point.txt", "w")
 		check_point_file.write("0")
 		return 0
-	
 
 #gets offset and count, returns id list
 def collect_ids(offset, count): 
@@ -89,8 +88,6 @@ def fetch_data(webenv, query_key, id_list, checkpoint):
 	else:
 		print("Failed to recover from error")
 		sys.exit()
-
-	
 
 
 def main():
