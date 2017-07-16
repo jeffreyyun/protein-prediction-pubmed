@@ -6,9 +6,9 @@ import os
 
 Entrez.email = "jenniezheng321@gmail.com" 
 
-#upper bound ~ 500000 entries
-max_count=30
-batch_size=3
+#upper bound ~ 50000 entries
+max_count=500
+batch_size=10
 database="protein"
 parameter="all[filter]"
 
@@ -48,7 +48,14 @@ def process_check_point():
 def collect_ids(): 
 	global max_count;
 	print("Searching with parameter %s in %s database for a maximum of %d ids" % (parameter, database, max_count));
-	handle = Entrez.esearch(db=database, term=parameter, idtype="acc",retmax=max_count)
+	try:
+		handle = Entrez.esearch(db=database, term=parameter, idtype="acc",retmax=max_count)
+	except HTTPError as err:
+		print("Received error from server %s" % err)
+		sys.exit()
+	except KeyboardInterrupt:
+		print("Quiting")
+		sys.exit()
 	print("Passed")
 	record=Entrez.read(handle)
 	max_count=min(int(record["Count"]),max_count)
@@ -64,8 +71,15 @@ def collect_ids():
 def conduct_websearch():
 	global webenv, query_key
 	print(id_list[check_point_start:])
-	print("Obtaining id's from %s to %s" % (id_list[check_point_start], id_list[len(id_list)-1]))
-	search_results = Entrez.read(Entrez.epost("protein", id=",".join(id_list[check_point_start:])))
+	print("Obtaining %d sequences of ids" % max_count)
+	try:
+		search_results = Entrez.read(Entrez.epost("protein", id=",".join(id_list[check_point_start:])))
+	except HTTPError as err:
+			print("Received error from server %s" % err)
+			sys.exit()
+	except KeyboardInterrupt:
+		print("Quiting")
+		sys.exit()
 	webenv = search_results["WebEnv"]
 	query_key = search_results["QueryKey"]
 	print("Search result is %s" % search_results)
@@ -96,12 +110,7 @@ def fetch_data():
 					print("Received error from server %s" % err)
 					if 500 <= err.code <= 599:
 						print("Attempt %i of 3" % attempt)
-						sleep(10)
-					elif err.code==400:
-						print("Attempted to obtain id %s" % id_list[start])
-						break;
-					else:
-						break;
+						sleep(15)
 			if(not failure):
 				data = fetch_handle.read()
 				fetch_handle.close()
@@ -109,6 +118,9 @@ def fetch_data():
 				out_handle.close()
 				check_point_file.seek(0)
 				check_point_file.write(str(end))
+			else:
+				print("Failed to recover from error")
+				sys.exit()
 	except KeyboardInterrupt:
 		print("Quiting")
 		check_point_file.close()
