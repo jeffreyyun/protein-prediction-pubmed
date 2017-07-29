@@ -8,7 +8,7 @@ TODO: Create checkpoint for processing sequences --> so no duplicates in process
 
 file_start_name = "data"
 
-def process_sequences(submission="submission.txt", chunk15=False, extend=False):
+def process_sequences(submission="submission.txt", chunk15=True, extend=False):
 
 	check_point_file = open(directory_name+"/check_point.txt", "r")
 	check_point= int(check_point_file.readline())
@@ -48,8 +48,8 @@ def process_sequences(submission="submission.txt", chunk15=False, extend=False):
 def processchunk15(extend=False):
 
 	# writes data in chunks of 15, skipping over 5 each time
-	data = open("processed.txt", 'r')
-	with open("submission.txt", 'w') as writefile:
+	data = open(directory_name+"/processed.txt", 'r')
+	with open(directory_name+"/submission.txt", 'w') as writefile:
 		for line in data:
 			llen = len(line)
 			if llen == 0:

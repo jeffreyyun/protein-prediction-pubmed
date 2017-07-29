@@ -5,7 +5,7 @@ import sys
 import os
 from parameters import *
 
-Entrez.email = "jenniezheng321@gmail.com" 
+Entrez.email = "hyun9@g.ucla.edu" 
 check_point = 0
 
 def process_arguments():

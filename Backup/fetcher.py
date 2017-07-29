@@ -4,7 +4,7 @@ from urllib.error import HTTPError
 import sys
 import os
 
-Entrez.email = "jenniezheng321@gmail.com" 
+Entrez.email = "hyun9@g.ucla.edu" 
 
 
 batch_size=1000
