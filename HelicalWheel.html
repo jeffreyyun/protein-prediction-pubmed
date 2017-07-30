@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://kael.net/helical.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  
+  <title>Helical Wheel</title>
+  <script src="./HelicalWheel_files/helical_canvas.js.download"></script>
+  <script type="text/javascript" src="./HelicalWheel_files/jsapi"></script>
+  <script type="text/javascript" src="./HelicalWheel_files/jquery.min.js.download">
+  </script>
+  <link rel="stylesheet" media="screen" type="text/css" href="./HelicalWheel_files/colorpicker.css">
+  <script type="text/javascript" src="./HelicalWheel_files/colorpicker.js.download"></script>
+
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#00FFFF" vlink="#00FFFF" alink="#FFFF00">
+<div id="main" align="left" style="padding: 15px;">
+<div id="wheel_container" style="float: left; width: 520px; height: 520px;">
+<canvas id="wheel_1" width="500" height="500" style="width: 500px; height: 500px; padding: 10px; background-color: white;"> </canvas> 
+</div>
+
+<div id="help" style="padding-left: 10px; width: 250px; float: left;">
+<strong>Instructions and caveats</strong>:<p></p>
+        <ul>
+            <li>Enter your primary sequence in the space
+                provided, using the one letter protein code</li> 
+            <li>Adjust the colors of the circles and letters as desired.</li>
+            <li>Currently, sequences longer than 18 residues are
+                not drawn well</li>
+        </ul>
+
+<div style="float: left;">Primary Sequence:<br>
+<textarea id="sequenceBox" onkeyup="updateWheel();" rows="2" cols="15">RMKQLEDKVEELLSKNYH</textarea></div>
+
+<div style="float: left; padding-left: 15px">Axis Style:<br>
+<select id="axisStyle" onchange="updateWheel();">
+    <option value="0" selected="1">vector </option>
+    <option value="2">spot </option>
+    <option value="3">none </option>
+</select>
+</div>
+<div style="float: left">Axis Direction (N to C):
+<select id="axisDirection" onchange="updateWheel();">
+   <option value="0" selected="1">into page</option>
+   <option value="1">out of page</option>
+</select>
+</div>
+
+<div id="colorSelector" style="border: solid; clear: both; padding: 15 px;">
+Edit residue types and colors here.  Double clicking brings up a color picker.
+<div>
+<textarea id="colors_1" rows="1" columns="10" class="cBox" style="background-color: #313131; color: white;" onkeyup="updateWheel();">GP</textarea>
+</div>
+<div>
+<textarea id="colors_2" rows="1" columns="10" class="cBox" style="background-color: #c21d1d; color: white;" onkeyup="updateWheel();">ED</textarea>
+</div>
+<div>
+<textarea id="colors_3" rows="1" columns="10" class="cBox" style="background-color: #3b37b8; color: white;" onkeyup="updateWheel();">KRH</textarea>
+</div>
+<div>
+<textarea id="colors_4" rows="1" columns="10" class="cBox" style="background-color: #FFFFFF; color: black;" onkeyup="updateWheel();"></textarea>
+</div>
+</div>
+</div>
+</div> 
+
+<div class="colorpicker" id="collorpicker_561"><div class="colorpicker_color" style="background-color: rgb(255, 0, 255);"><div><div style="left: 0px; top: 150px;"></div></div></div><div class="colorpicker_hue"><div style="top: 25px;"></div></div><div class="colorpicker_new_color" style="background-color: rgb(0, 0, 0);"></div><div class="colorpicker_current_color" style="background-color: rgb(0, 0, 0);"></div><div class="colorpicker_hex"><input type="text" maxlength="6" size="6"></div><div class="colorpicker_rgb_r colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_g colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_h colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_s colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_submit"></div></div><div class="colorpicker" id="collorpicker_5"><div class="colorpicker_color" style="background-color: rgb(255, 0, 0);"><div><div style="left: 150px; top: 0px;"></div></div></div><div class="colorpicker_hue"><div style="top: 150px;"></div></div><div class="colorpicker_new_color" style="background-color: rgb(255, 0, 0);"></div><div class="colorpicker_current_color" style="background-color: rgb(255, 0, 0);"></div><div class="colorpicker_hex"><input type="text" maxlength="6" size="6"></div><div class="colorpicker_rgb_r colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_g colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_h colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_s colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_submit"></div></div><div class="colorpicker" id="collorpicker_872"><div class="colorpicker_color" style="background-color: rgb(255, 0, 0);"><div><div style="left: 150px; top: 0px;"></div></div></div><div class="colorpicker_hue"><div style="top: 150px;"></div></div><div class="colorpicker_new_color" style="background-color: rgb(255, 0, 0);"></div><div class="colorpicker_current_color" style="background-color: rgb(255, 0, 0);"></div><div class="colorpicker_hex"><input type="text" maxlength="6" size="6"></div><div class="colorpicker_rgb_r colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_g colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_h colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_s colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_submit"></div></div><div class="colorpicker" id="collorpicker_208"><div class="colorpicker_color" style="background-color: rgb(255, 0, 0);"><div><div style="left: 150px; top: 0px;"></div></div></div><div class="colorpicker_hue"><div style="top: 150px;"></div></div><div class="colorpicker_new_color" style="background-color: rgb(255, 0, 0);"></div><div class="colorpicker_current_color" style="background-color: rgb(255, 0, 0);"></div><div class="colorpicker_hex"><input type="text" maxlength="6" size="6"></div><div class="colorpicker_rgb_r colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_g colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_rgb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_h colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_s colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_hsb_b colorpicker_field"><input type="text" maxlength="3" size="3"><span></span></div><div class="colorpicker_submit"></div></div></body>
+
+<script type="text/javascript">
+    function setup() {
+    $('#colors_1').ColorPicker(
+    {'color':$('#colors_1').css('backgroundColor'),'eventName':'dblclick',
+       'onChange': function (hsb, hex, rgb) {
+	    $('#colors_1').css('backgroundColor', '#' + hex);
+            $('#colors_1').css('color',getTextColor(hex));  },
+       'onHide':  function (hsb, hex, rgb) {updateWheel();},
+       'onSubmit':  function (hsb, hex, rgb) {updateWheel();}
+    });
+    $('#colors_2').ColorPicker(
+      {'eventName':'dblclick',
+       'onChange': function (hsb, hex, rgb) {
+	    $('#colors_2').css('backgroundColor', '#' + hex);
+            $('#colors_2').css('color',getTextColor(hex));  },
+       'onHide':  function (hsb, hex, rgb) {updateWheel();},
+       'onSubmit':  function (hsb, hex, rgb) {updateWheel();}
+    });
+    $('#colors_3').ColorPicker(
+      {'eventName':'dblclick',
+       'onChange': function (hsb, hex, rgb) {
+	    $('#colors_3').css('backgroundColor', '#' + hex);
+            $('#colors_3').css('color',getTextColor(hex));  },
+       'onHide':  function (hsb, hex, rgb) {updateWheel();},
+       'onSubmit':  function (hsb, hex, rgb) {updateWheel();}
+    });
+    $('#colors_4').ColorPicker(
+      {'eventName':'dblclick',
+       'onChange': function (hsb, hex, rgb) {
+	    $('#colors_4').css('backgroundColor', '#' + hex);
+            $('#colors_4').css('color',getTextColor(hex));  },
+       'onHide':  function (hsb, hex, rgb) {updateWheel();},
+       'onSubmit':  function (hsb, hex, rgb) {updateWheel();}
+    });
+    }
+
+function getTextColor(backgroundHex){
+    red=parseInt(backgroundHex.substring(0,2),16);
+    green=parseInt(backgroundHex.substring(2,4),16);
+    blue=parseInt(backgroundHex.substring(4,6),16);
+    var brightness = ((red * 299) + (green * 587) + (blue * 114)) / 1000;
+    if(brightness < 125) { //background is dark
+        return 'white';
+    } else {
+        return 'black';
+    }
+}
+
+function drawWheel () {
+    setup();
+    var myWheel = new Wheel("wheel_1");
+    myWheel.setColors($('.cBox'));
+    myWheel.draw();
+}
+
+function updateWheel() {
+    var myWheel = new Wheel("wheel_1");
+    if (document.getElementById("sequenceBox").value.length > 0){
+        myWheel.sequence=String(document.getElementById("sequenceBox").value);
+    }
+    myWheel.direction=document.getElementById("axisDirection").value;
+    myWheel.axisStyle=document.getElementById("axisStyle").value;
+    myWheel.setColors($('.cBox'));
+    myWheel.draw();
+	
+}
+
+
+google.setOnLoadCallback(drawWheel);
+window.onload = function(e){document.getElementById('file-input').addEventListener('change', readSingleFile, false);}
+
+function readSingleFile(e) {
+  var file = e.target.files[0];
+  var reader = new FileReader();
+  reader.onload = function(){getImage(reader.result);};
+  reader.readAsText(file);
+}
+
+function getImage(file) {
+	var sequences = file.split('\n');
+	var clean_sequences = [];
+  var title = sequences[0].substring(1, sequences[0].indexOf(' '));
+  var count = 1;
+	for (var i = 0; i < sequences.length; i++) {
+    if (sequences[i][0] == '>') {
+      title = sequences[i].substring(1, sequences[i].indexOf(' '));
+      count = 1;
+    }
+    else if (sequences[i].length <= 2) {
+      continue
+    }
+		else if (sequences[i][0] != '>') {
+      getWheel(sequences[i], title + "_" + String(count) + "_" + sequences[i]);
+      count++;
+		}
+	}
+}
+
+function getWheel(sequ, name) {
+	var myWheel = new Wheel("wheel_1");
+	myWheel.sequence = sequ;
+	myWheel.direction=document.getElementById("axisDirection").value;
+  myWheel.axisStyle=document.getElementById("axisStyle").value;
+  myWheel.setColors($('.cBox'));
+  myWheel.draw();
+	
+  var image = document.createElement("img");;
+	image.src = document.getElementById("wheel_1").toDataURL("image/png");
+	a = document.createElement("a");
+	a.href = image.src;
+	a.download = name;
+	a.click();
+	/*document.getElementById("a").remove();*/
+}
+
+</script>
+
+<input type="file" id="file-input" />
+
+</html>
