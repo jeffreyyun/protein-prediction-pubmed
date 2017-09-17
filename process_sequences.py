@@ -14,7 +14,7 @@ def process_sequences(submission="submission.txt", chunk15=True, extend=False):
 	check_point= int(check_point_file.readline())
 	print(check_point)
 	check_point_file.close()
-	
+
 	batch_files= []
 	for i in os.listdir(directory_name):
 		if i.startswith(file_start_name):
@@ -35,18 +35,16 @@ def process_sequences(submission="submission.txt", chunk15=True, extend=False):
 			else:
 				readfile[n] = line.rstrip()
 
-		# saves data processed from above		
+		# saves data processed from above
 		data = ''.join(readfile)
 		with open(directory_name+"/processed.txt", 'a+') as writefile:
 			writefile.write(data)
 			print("Processed", datafile)
-
 	if chunk15:
 		processchunk15(extend)
 
 
 def processchunk15(extend=False):
-
 	# writes data in chunks of 15, skipping over 5 each time
 	data = open(directory_name+"/processed.txt", 'r')
 	with open(directory_name+"/submission.txt", 'w') as writefile:

@@ -1,15 +1,14 @@
 from Bio import Entrez
 from time import sleep
-from urllib.error import HTTPError  
+from urllib.error import HTTPError
 import sys
 import os
 from parameters import *
 
-Entrez.email = "hyun9@g.ucla.edu" 
+Entrez.email = "hyun9@g.ucla.edu"
 check_point = 0
 
 def process_arguments():
-	""" incompatible with current version """
 	if(len(sys.argv)!=2):
 		print("Usage: python3 fetcher.py PROJECT_DIRECTORY_NAME")
 		exit(1)
@@ -34,7 +33,7 @@ def process_check_point():
 		return 0
 
 #gets offset and count, returns id list
-def collect_ids(offset, count): 
+def collect_ids(offset, count):
 	try:
 		handle = Entrez.esearch(db=db, retstart=offset, term=term, idtype="acc",retmax=count)
 	except HTTPError as err:
@@ -57,6 +56,7 @@ def conduct_websearch(id_list):
 
 def fetch_data(webenv, query_key, id_list, checkpoint):
 	attempt = 0
+    filename = directory_name+"/data"+str(checkpoint)+".fasta";
 	while attempt < 3:
 		attempt += 1
 		failure = 0
@@ -75,18 +75,18 @@ def fetch_data(webenv, query_key, id_list, checkpoint):
 	if(not failure):
 		data = fetch_handle.read()
 		fetch_handle.close()
-		out_handle=open(directory_name+"/data"+str(checkpoint)+".fasta","w")
+		out_handle=open(filename,"w")
 		out_handle.write(data)
 		out_handle.close()
 	else:
 		print("Failed to recover from error")
 		sys.exit()
-
+    return filename;
 
 def main():
 	#process_arguments()
 	check_point=process_check_point()
-	#Preliminary check: 
+	#Preliminary check:
 	try:
 		handle = Entrez.esearch(db=db, retstart=check_point, term=term, idtype="acc",retmax=5)
 	except HTTPError as err:
@@ -99,7 +99,8 @@ def main():
 			print("Retrieving protein sequence from index %d to %d" % (check_point, check_point+batch_size-1))
 			id_list=collect_ids(check_point,batch_size)
 			webenv, query=conduct_websearch(id_list)
-			fetch_data(webenv, query, id_list, check_point)
+			file_name=fetch_data(webenv, query, id_list, check_point)
+            process_sequences(file_name)
 			check_point+=len(id_list)
 			check_point_file = open(directory_name+"/check_point.txt", "w")
 			check_point_file.write(str(check_point))
