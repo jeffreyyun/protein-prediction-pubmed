@@ -8,12 +8,12 @@ from parameters import *
 Entrez.email = "hyun9@g.ucla.edu" 
 check_point = 0
 
-def process_arguments():
-	""" incompatible with current version """
-	if(len(sys.argv)!=2):
-		print("Usage: python3 fetcher.py PROJECT_DIRECTORY_NAME")
-		exit(1)
-	directory_name=str(sys.argv[1])
+# def process_arguments():
+# 	""" incompatible with current version """
+# 	if(len(sys.argv)!=2):
+# 		print("Usage: python3 fetcher.py PROJECT_DIRECTORY_NAME")
+# 		exit(1)
+# 	directory_name=str(sys.argv[1])
 
 #returns checkpoint
 def process_check_point():
@@ -105,7 +105,7 @@ def main():
 			check_point_file.write(str(check_point))
 			check_point_file.close()
 		except KeyboardInterrupt:
-			print("Quiting")
+			print("Quitting")
 			sys.exit()
 	print("Done!")
 

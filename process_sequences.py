@@ -1,4 +1,3 @@
-from parameters import *
 import os
 #import pdb
 
@@ -6,50 +5,55 @@ import os
 TODO: Create checkpoint for processing sequences --> so no duplicates in processed file!
 """
 
-file_start_name = "data"
+def process_sequences(dir_name="data/data.fasta", post1="processed.txt", post2="processed15.txt", chunk15=True, extend=False):
 
-def process_sequences(submission="submission.txt", chunk15=True, extend=False):
+	"""
+	Formats FASTA file to display sequences on one line or 15 molecules per line
 
-	check_point_file = open(directory_name+"/check_point.txt", "r")
-	check_point= int(check_point_file.readline())
-	print(check_point)
-	check_point_file.close()
+	ARGUMENTS
+	dir: directory of FASTA-format file
+	chunk15: whether to split into amino acid sequences chunks of 15 with stride 5
 	
-	batch_files= []
-	for i in os.listdir(directory_name):
-		if i.startswith(file_start_name):
-			batch_files.append(i)
+	RETURNS
+	None
+	"""
+
+	# # prints out checkpoint
+	# check_point_file = open(directory_name, "r")
+	# check_point= int(check_point_file.readline())
+	# print(check_point)
+	# check_point_file.close()
 
 	#pdb.set_trace()
-	for batch in batch_files:
-		# assumes batches numbered as "data0.fasta", "data1.fasta", etc., can change
-		datafile=directory_name+"/"+batch
+	dir_folder, _ = os.path.split(dir_name)
+	datafile = dir_name
 
-		# merges each paragraph into a single line
-		readfile = open(datafile).readlines()
-		for n,line in enumerate(readfile):
-			# separate new protein with whitespace
-			if line.startswith(">"):
-				readfile[n] = "\n\n" + line
-			# if part of sequence, strips the whitespace
-			else:
-				readfile[n] = line.rstrip()
+	# merges each paragraph into a single line
+	readfile = open(datafile).readlines()
+	for n,line in enumerate(readfile):
+		# separate new protein with whitespace
+		if line.startswith(">"):
+			line.replace(" ", "")		# removes all whitespace in id
+			readfile[n] = "\n\n" + line
+		# if part of sequence, strips the whitespace
+		else:
+			readfile[n] = line.rstrip()
 
-		# saves data processed from above		
-		data = ''.join(readfile)
-		with open(directory_name+"/processed.txt", 'a+') as writefile:
-			writefile.write(data)
-			print("Processed", datafile)
+	# saves data processed from above		
+	data = ''.join(readfile)
+	with open(dir_folder+"/"+post1, 'a+') as writefile:
+		writefile.write(data)
+		print("Processed", datafile)
 
 	if chunk15:
-		processchunk15(extend)
+		processchunk15(dir_folder, post1, post2, extend)
 
 
-def processchunk15(extend=False):
+def processchunk15(dir_folder="data", post1="processed.txt", post2="processed15.txt", extend=False):
 
 	# writes data in chunks of 15, skipping over 5 each time
-	data = open(directory_name+"/processed.txt", 'r')
-	with open(directory_name+"/submission.txt", 'w') as writefile:
+	data = open(dir_folder+"/"+post1, 'r')
+	with open(dir_folder+"/"+post2, 'w') as writefile:
 		for line in data:
 			llen = len(line)
 			if llen == 0:
