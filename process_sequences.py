@@ -5,7 +5,7 @@ import os
 TODO: Create checkpoint for processing sequences --> so no duplicates in processed file!
 """
 
-def process_sequences(dir_name="data/data.fasta", post1="processed.txt", post2="processed15.txt", chunk15=True, extend=False):
+def process_sequences(dir_name="data/data.fasta", post1="processed.txt", post2="processed15.txt", chunk=True, chunk_size=15, stride=5, extend=False):
 
 	"""
 	Formats FASTA file to display sequences on one line or 15 molecules per line
@@ -45,13 +45,13 @@ def process_sequences(dir_name="data/data.fasta", post1="processed.txt", post2="
 		writefile.write(data)
 		print("Processed", datafile)
 
-	if chunk15:
-		processchunk15(dir_folder, post1, post2, extend)
+	if chunk:
+		process_chunk(dir_folder, post1, post2, chunk_size, stride, extend)
 
 
-def processchunk15(dir_folder="data", post1="processed.txt", post2="processed15.txt", extend=False):
+def process_chunk(dir_folder="data", post1="processed.txt", post2="processed15.txt", chunk_size=15, stride=5, extend=False):
 
-	# writes data in chunks of 15, skipping over 5 each time
+	# writes data in chunks of 15 with stride of 5
 	data = open(dir_folder+"/"+post1, 'r')
 	with open(dir_folder+"/"+post2, 'w') as writefile:
 		for line in data:
@@ -60,13 +60,13 @@ def processchunk15(dir_folder="data", post1="processed.txt", post2="processed15.
 				writefile.write("")
 			elif line.startswith(">"):
 				writefile.write(line)
-			# cuts into chunks of 15
+			# splits into lines of len chunk_size
 			else:
-				for i in range(0, llen-10, 5):
-					if extend and i+18 > llen:
+				for i in range(0, llen-(chunk_size-stride), stride):
+					if extend and i+(chunk_size+stride//2+stride%2) > llen:
 						writefile.write(line[i:] + "\n")
 						break
-					writefile.write(line[i:i+15] + "\n")
+					writefile.write(line[i:i+(chunk_size+stride)] + "\n")
 
 
 def main():
